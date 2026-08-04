@@ -41,7 +41,7 @@ for (i in 1:nrow(comb)) {
   n = comb$richness[i]
   j = comb$asym[i]
   
-  A = make_matrix_fitness(.5, j, n)
+  A = make_matrix_fitness(n, .5, j)
   
   d1[[i]] = data.frame(competitive_asymmetry = j,
                        Omega = feasibility_domain(A),
